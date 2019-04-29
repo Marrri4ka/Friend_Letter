@@ -4,7 +4,8 @@ namespace FriendLetter.Models
   {
     private string _recipient;
     private string _sender;
-    private string _location;// Field
+    private string _location;
+    private string _souvenir;// Field
 
     public string GetRecipient() // method
     {
@@ -35,6 +36,16 @@ namespace FriendLetter.Models
     public void SetLocation (string newLocation)
     {
       _location = newLocation;
+    }
+
+    public string GetSouvenir()
+    {
+      return _souvenir;
+    }
+
+    public void SetSouvenir (string newSouvenir)
+    {
+      _souvenir =newSouvenir;
     }
   }
 }

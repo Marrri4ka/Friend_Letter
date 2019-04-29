@@ -12,12 +12,13 @@ namespace FriendLetter.Controllers
       return View();
     }
     [Route ("/postcard")] // should be the same as form action
-    public ActionResult Postcard (string recipient, string sender, string location) // Postcard method name should match cshtml name
+    public ActionResult Postcard (string recipient, string sender, string location, string souvenir) // Postcard method name should match cshtml name
     {
       LetterVariable myLetterVariable = new LetterVariable ();
       myLetterVariable.SetRecipient (recipient);
       myLetterVariable. SetSender (sender);
       myLetterVariable.SetLocation (location);
+      myLetterVariable.SetSouvenir (souvenir);
       return View (myLetterVariable);
     }
     [Route ("/hello")]
